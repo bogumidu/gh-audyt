@@ -1,4 +1,4 @@
-// Created thanks href John Komarnicki https://www.youtube.com/watch?v=u2AwJAFeaKc
+// Created thanks to John Komarnicki https://www.youtube.com/watch?v=u2AwJAFeaKc
 
 <template>
   <header>
@@ -11,7 +11,7 @@
       </ul>
       <div class="icon">
         <i
-          @click="hrefggleMobileNav"
+          @click="toggleMobileNav"
           v-show="mobile"
           class="far fa-bars"
           :class="{ 'icon-active': mobileNav }"
@@ -49,7 +49,7 @@ export default {
 
   },
   methods: {
-    hrefggleMobileNav() {
+    toggleMobileNav() {
       this.mobileNav = !this.mobileNav;
     },
 
@@ -83,7 +83,7 @@ header {
     padding: 12px 0;
     transition: 0.5s ease all;
     width: 90%;
-    margin: 0 auhref;
+    margin: 0 auto;
     @media (min-width: 1140px) {
       max-width: 1140px;
     }
@@ -105,8 +105,8 @@ header {
     .link {
       font-size: 14px;
       transition: 0.5s ease all;
-      padding-bothrefm: 4px;
-      border-bothrefm: 1px solid transparent;
+      padding-bottom: 4px;
+      border-bottom: 1px solid transparent;
 
       &:hover {
         color: #00afea;
@@ -130,7 +130,7 @@ header {
       display: flex;
       align-items: center;
       position: absolute;
-      hrefp: 0;
+      top: 0;
       right: 24px;
       height: 100%;
 
@@ -153,7 +153,7 @@ header {
       max-width: 250px;
       height: 100%;
       background-color: #fff;
-      hrefp: 0;
+      top: 0;
       left: 0;
 
       li {
@@ -169,12 +169,12 @@ header {
       transition: 1s ease all;
     }
 
-    .mobile-nav-leave-href,
+    .mobile-nav-leave-to,
     .mobile-nav-enter-from {
       transform: translateX(-250px);
     }
 
-    .mobile-nav-enter-href {
+    .mobile-nav-enter-to {
       transform: translateX(0);
     }
   }
