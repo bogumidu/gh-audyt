@@ -84,6 +84,7 @@ header {
     transition: 0.5s ease all;
     width: 90%;
     margin: 0 auto;
+    min-height: 80px;
     @media (min-width: 1140px) {
       max-width: 1140px;
     }

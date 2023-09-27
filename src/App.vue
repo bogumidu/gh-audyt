@@ -1,12 +1,34 @@
 <script setup lang="ts">
-import AppNavigation from './components/AppNavigation.vue'
+import { ref, computed, VueElement } from 'vue';
+import AppNavigation from './components/AppNavigation.vue';
+import Home from './components/Home.vue';
+import Price from './components/Price.vue';
+import Contact from './components/Contact.vue';
+import Faq from './components/Faq.vue';
+
+const routes = {
+  'gh-audyt/': Home,
+  'gh-audyt/price': Price,
+  'gh-audyt/contact': Contact,
+  'gh-audyt/faq': Faq
+}
+
+const currentPath = ref(window.location.hash)
+
+window.addEventListener('hashchange', () => {
+  currentPath.value = window.location.hash
+})
+
+const currentView = computed(() => {
+  return routes[currentPath.value.slice(1) || 'gh-audyt/'] || Home
+})
 
 </script>
 
 <template>
   <div class="app">
     <AppNavigation/>
-    <router-view />
+    <component :is="currentView" />
   </div>
 </template>
 
@@ -25,10 +47,5 @@ import AppNavigation from './components/AppNavigation.vue'
   min-height: 100vh;
   position: relative;
   background-color: #f1f1f1;
-}
-.container {
-  padding: 0 20px;
-  max-width: 1140px;
-  margin: 0 auto;
 }
 </style>
