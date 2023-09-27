@@ -13,14 +13,23 @@ const routes = {
   'gh-audyt/faq': Faq
 }
 
+function getRoute(match: string) {
+  const routesKeys: string[] = Object.keys(routes);
+  const routesValues: any[] = Object.values(routes);
+  const index = routesKeys.indexOf(match);
+  return index >= 0 ? routesValues[index] : routesValues[0];
+}
+
+console.log(Object.values(routes));
+
 const currentPath = ref(window.location.hash)
 
 window.addEventListener('hashchange', () => {
   currentPath.value = window.location.hash
 })
 
-const currentView = computed(() => {
-  return routes[currentPath.value.slice(1) || 'gh-audyt/'] || Home
+const currentView: any = computed(() => {
+  return getRoute(currentPath.value.slice(1));
 })
 
 </script>
