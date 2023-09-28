@@ -16,13 +16,13 @@
           :class="{ 'icon-active': mobileNav }"
         ></i>
       </div>
-      <transition name="mobile-nav">
+      <Transition name="mobile-nav">
         <ul v-show="mobileNav" class="dropdown-nav">
           <li><a class="link" href="#price">Cennik</a></li>
           <li><a class="link" href="#faq">Pytania i odpowiedzi</a></li>
           <li><a class="link" href="#contact">Kontakt</a></li>
         </ul>
-      </transition>
+      </Transition>
     </nav>
   </header>
 </template>
