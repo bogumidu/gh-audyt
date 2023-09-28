@@ -1,7 +1,9 @@
 // Created thanks to John Komarnicki https://www.youtube.com/watch?v=u2AwJAFeaKc
 
 <template>
-  <h1>Contact</h1>
+  <section id="contact">
+    <h1>Contact</h1>
+  </section>
 </template>
 
 <script lang="ts">

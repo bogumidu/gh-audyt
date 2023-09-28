@@ -1,13 +1,13 @@
 // Created thanks to John Komarnicki https://www.youtube.com/watch?v=u2AwJAFeaKc
 
 <template>
-  <section class="hero">
+  <section class="hero" id="home">
     <div class="container flex-row">
       <div class="left">
         <h2>Lorem ipsum dolor sit amet.</h2>
         <div class="buttons">
-          <a href="#" class="btn">Dlaczego warto?</a>
-          <a href="#" class="btn btn-light">Ceny</a>
+          <a href="#faq" class="btn">Dlaczego warto?</a>
+          <a href="#price" class="btn btn-light">Ceny</a>
         </div>
       </div>
       <img src="../../public/audyt.png" alt="">

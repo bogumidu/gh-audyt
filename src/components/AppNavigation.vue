@@ -4,10 +4,9 @@
   <header>
     <nav>
       <ul v-show="!mobile" class="navigation">
-        <li><a class="link" href="/">Strona główna</a></li>
-        <li><a class="link" href="/price">Cennik</a></li>
-        <li><a class="link" href="/contact">Kontakt</a></li>
-        <li><a class="link" href="/faq">Pytania i odpowiedzi</a></li>
+        <li><a class="link" href="#price">Cennik</a></li>
+        <li><a class="link" href="#faq">Pytania i odpowiedzi</a></li>
+        <li><a class="link" href="#contact">Kontakt</a></li>
       </ul>
       <div class="icon">
         <i
@@ -19,10 +18,9 @@
       </div>
       <transition name="mobile-nav">
         <ul v-show="mobileNav" class="dropdown-nav">
-          <li><a class="link" href="/">Strona główna</a></li>
-          <li><a class="link" href="/price">Cennik</a></li>
-          <li><a class="link" href="/contact">Kontakt</a></li>
-          <li><a class="link" href="/faq">Pytania i odpowiedzi</a></li>
+          <li><a class="link" href="#price">Cennik</a></li>
+          <li><a class="link" href="#faq">Pytania i odpowiedzi</a></li>
+          <li><a class="link" href="#contact">Kontakt</a></li>
         </ul>
       </transition>
     </nav>

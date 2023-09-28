@@ -2,42 +2,23 @@
 import { ref, computed, VueElement } from 'vue';
 import AppNavigation from './components/AppNavigation.vue';
 import Home from './components/Home.vue';
+import About from './components/About.vue';
 import Price from './components/Price.vue';
-import Contact from './components/Contact.vue';
 import Faq from './components/Faq.vue';
-
-const routes = {
-  'gh-audyt/': Home,
-  'gh-audyt/price': Price,
-  'gh-audyt/contact': Contact,
-  'gh-audyt/faq': Faq
-}
-
-function getRoute(match: string) {
-  const routesKeys: string[] = Object.keys(routes);
-  const routesValues: any[] = Object.values(routes);
-  const index = routesKeys.indexOf(match);
-  return index >= 0 ? routesValues[index] : routesValues[0];
-}
-
-console.log(Object.values(routes));
-
-const currentPath = ref(window.location.hash)
-
-window.addEventListener('hashchange', () => {
-  currentPath.value = window.location.hash
-})
-
-const currentView: any = computed(() => {
-  return getRoute(currentPath.value.slice(1));
-})
+import Contact from './components/Contact.vue';
 
 </script>
 
 <template>
   <div class="app">
     <AppNavigation/>
-    <component :is="currentView" />
+    <div class="content">
+      <Home/>
+      <About/>
+      <Price/>
+      <Faq/>
+      <Contact/>
+    </div>
   </div>
 </template>
 
@@ -57,4 +38,80 @@ const currentView: any = computed(() => {
   position: relative;
   background-color: #f1f1f1;
 }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+// .flex-row {
+//   gap: 32px;
+//   flex-direction: column;
+//   align-items: center;
+//   @media(min-width: 1000px) {
+//     flex-direction: row;
+//   }
+// }
+
+.section {
+  display: flex;
+  padding: 75px 0;
+  width: 75%;
+  margin: 0 auto;
+  max-width: 1140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+
+  img {
+    width: 0;
+    @media (min-width: 1000px) {
+      width: 85%;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-block-start: 20px;
+    margin-block-end: 20px;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-block-start: 8px;
+    margin-block-end: 8px;
+    margin-inline-start: 27px;
+  }
+
+  p {
+    line-height: 1.7;
+    font-size: 16px;
+
+    strong {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+  .flex-row {
+    display: flex;
+    gap: 50px;
+    flex-direction: row;
+  }
+
+  .left,
+  .right {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    order: 1;
+    justify-content: center;
+  }
+}
+
 </style>
