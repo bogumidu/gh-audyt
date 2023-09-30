@@ -33,7 +33,7 @@ export default {}
     gap: 32px;
     flex-direction: column;
     align-items: center;
-    @media(min-width: 1000px) {
+    @media(min-width: 1200px) {
       flex-direction: row;
     }
   }
@@ -43,7 +43,7 @@ export default {}
     font-size: 40px;
     margin-bottom: 32px;
     text-align: center;
-    @media(min-width: 1000px) {
+    @media(min-width: 1200px) {
       text-align: initial;
       font-size: 48px;
     }
@@ -60,7 +60,7 @@ export default {}
     display: flex;
     flex-direction: column;
     align-items: center;
-    @media(min-width: 1000px) {
+    @media(min-width: 1200px) {
       flex-direction: row;
     }
 
@@ -68,7 +68,7 @@ export default {}
       text-align: center;
       width: 250px;
       margin-bottom: 16px;
-    @media(min-width: 1000px) {
+    @media(min-width: 1200px) {
       margin-right: 16px;
     }
     }
@@ -79,7 +79,7 @@ export default {}
     flex: 1;
     order: 2;
     width: 85%;
-    @media(min-width: 1000px) {
+    @media(min-width: 1200px) {
       width: 50%;
     }
   }

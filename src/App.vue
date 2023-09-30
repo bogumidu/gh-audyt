@@ -6,6 +6,7 @@ import About from './components/About.vue';
 import Price from './components/Price.vue';
 import Faq from './components/Faq.vue';
 import Contact from './components/Contact.vue';
+import Footer from './components/Footer.vue';
 
 let displayModal = true
 
@@ -27,6 +28,7 @@ function toggleModal() {
       <Contact
         @toggleModal="toggleModal"
       />
+      <Footer/>
     </div>
   </div>
 </template>
