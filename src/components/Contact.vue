@@ -21,7 +21,7 @@
 
 <script lang="ts">
 import ContactModal from './ContactModal.vue';
-import db from '../firebase/init.js'
+import db from '../firebase/init'
 import { addDoc, collection } from 'firebase/firestore';
 
 const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;

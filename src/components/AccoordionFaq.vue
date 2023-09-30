@@ -20,18 +20,18 @@ export default {
   name: 'AccordinFaq',
   props: ['faq', 'index', 'open'],
   methods: {
-    beforeEnter: function(el) {
+    beforeEnter: function(el: any) {
       el.style.height = '0'
     },
-    enter: function(el) {
+    enter: function(el: any) {
       el.style.height = (el.scrollHeight + 10) + 'px';
       el.style.opacity = '1';
     },
-    beforeLeave: function(el) {
+    beforeLeave: function(el: any) {
       el.style.height = (el.scrollHeight + 10) + 'px';
       el.style.opacity = '0';
     },
-    leave: function(el) {
+    leave: function(el: any) {
       el.style.height = '0';
     }
   }
