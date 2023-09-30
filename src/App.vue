@@ -7,6 +7,13 @@ import Price from './components/Price.vue';
 import Faq from './components/Faq.vue';
 import Contact from './components/Contact.vue';
 
+let displayModal = true
+
+function toggleModal() {
+  console.log('toggling')
+  displayModal = !displayModal;
+}
+
 </script>
 
 <template>
@@ -17,7 +24,9 @@ import Contact from './components/Contact.vue';
       <About/>
       <Price/>
       <Faq/>
-      <Contact/>
+      <Contact
+        @toggleModal="toggleModal"
+      />
     </div>
   </div>
 </template>
@@ -43,6 +52,33 @@ import Contact from './components/Contact.vue';
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 14px 40px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 45px;
+  border: 2px solid transparent;
+  font-weight: 600;
+  transition: 500ms ease all;
+
+  &:hover {
+    background-color: transparent;
+    border-color: #fff;
+  }
+}
+
+.btn-light {
+  background-color: transparent;
+  border-color: #fff;
+
+  &:hover {
+    background-color: #007bff;
+    border-color: transparent;
+  }
 }
 
 // .flex-row {

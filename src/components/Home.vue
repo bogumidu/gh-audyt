@@ -86,33 +86,6 @@ export default {}
 
 }
 
-.btn {
-  cursor: pointer;
-  display: inline-block;
-  padding: 14px 40px;
-  background-color: #007bff;
-  color: #fff;
-  border-radius: 45px;
-  border: 2px solid transparent;
-  font-weight: 600;
-  transition: 500ms ease all;
-
-  &:hover {
-    background-color: transparent;
-    border-color: #fff;
-  }
-}
-
-.btn-light {
-  background-color: transparent;
-  border-color: #fff;
-
-  &:hover {
-    background-color: #007bff;
-    border-color: transparent;
-  }
-}
-
 .flex-row {
   display: flex;
 }
